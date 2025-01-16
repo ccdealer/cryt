@@ -19,10 +19,11 @@ def get_home():
 @app.route("/str1", methods = ["GET", "POST"])
 def get_str1():
     if request.method == "POST":
-        for i in range(3):
-            forward(100)
-            left(90)
-        forward(100)
+        t = Turtle()
+        for i in range(4):
+            t.forward(100)
+            t.left(90)
+        done()
         return render_template("str1.html" )
     return render_template("str1.html")
 
