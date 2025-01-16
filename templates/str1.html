@@ -1,0 +1,14 @@
+{% extends "Home.html" %}
+{%block title%} STR! {% endblock %}
+
+
+{% block container1 %}
+    <h1>Введите размер квадрата</h1>
+    <form action="/str1" method="post">
+        <button type="submit"> PUSH </button>
+    </form>
+
+    {% if scale %}
+        {{ event }}
+    {% endif %}
+{% endblock %}
